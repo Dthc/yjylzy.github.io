@@ -1,5 +1,36 @@
 <!DOCTYPE html>
 <html>
+     <script language = JavaScript>
+    function password() {
+         var testV = 1;
+        var pass1 = prompt('请输入密码:', '');
+        
+        while (testV < 3) {
+        
+        if (!pass1) history.go(-1);
+        
+        if (pass1 == "0609") {
+        
+        alert('密码正确!');
+        
+        break;
+        
+        }
+        
+        testV += -1;
+        
+        var pass1 = prompt('密码错误!请重新输入:');
+        
+        }
+        
+        if (pass1 != "password" & testV == 3) history.go(-1);
+        
+        return " ";
+      
+        }
+        
+  document.write(password());
+    </script>        
 <body>
 <h1>其实这是一个网页——yjylzy.xyz</yjylzy>(没错，我自己搭的，搜这个网址也可以搜到）</h1>
 <h1><font color="pink">星星不会奔向你，但我会不远万里</font></h1>
