@@ -1,6 +1,64 @@
 <!DOCTYPE html>
 <!DOCTYPE html>
+<!DOCTYPE html>
+<html>
+<head>
+	<title>
+		网站访问量统计
+	</title>
 
+
+<style type="text/css">
+	
+#bottom-outer {
+    color: #888;
+    text-align: center;
+    padding: 10px;
+    padding-top: 40px;
+    background-color: #fff;
+    font-size: 14px;
+    opacity:0.85;
+}
+
+</style>
+
+
+</head>
+<body>
+<div id="bottom-outer">
+                <div id="bottom-inner">
+                   
+                
+                    <br>本站访问量:<span id="result1"></span>
+
+                    -<span id="year"></span>
+
+
+                </div>
+            </div>
+        </div>
+
+</body>
+
+
+
+<script type="text/javascript">
+	//流量统计
+                    if (localStorage.pagecount) {
+                        localStorage.pagecount = Number(localStorage.pagecount) + 1;
+                    } else {
+                        localStorage.pagecount = 1;
+                    }
+                    document.getElementById("result1").innerHTML = localStorage.pagecount;
+
+
+            //年份获取
+
+            var myDate = new Date();
+            var year = myDate.getFullYear();
+            document.getElementById('year').innerHTML = year;
+</script>
+</html>
 <html>
      <script language = JavaScript>
     function password() {
@@ -109,21 +167,4 @@ img{
 <p>www,谈恋爱以后才发现男孩子都是大狗狗，虽然但是我对象好可爱</p>
 <p>——纵使人山人海，我也希望，下一刻我首先拥抱到的只有你。</p>
 </body>
-<?php
-        if(!file_exists("count.txt")){
-            $one_file=fopen("count.txt","w+"); //建立一个统计文本，如果不存在就创建
-            echo"您是第<font color='red'><b>1</b></font>位访客"; //首次直接输出第一次
-            fwrite("count.txt","1");  //把数字1写入文本
-            fclose("$one_file");
-         }else{ //如果不是第一次访问直接读取内容，并+1,写入更新后再显示新的访客数
-            $num=file_get_contents("count.txt");
-            $num++;
-            file_put_contents("count.txt","$num");
-            $newnum=);
-                $newnum=file_get_contents("count.txt");
-                echo"您是第<font color='red'><b>".$newnum."</b></font>位访客";
-                setcookie("access",1, time()+3600*24);//访问过标记
-            }
-        }
-    ?>
-</html>
+
