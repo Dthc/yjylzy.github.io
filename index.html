@@ -3,6 +3,7 @@
 
 <html>
      <script language = JavaScript>
+        i=1; 
     function password() {
          var testV = 1;
         var pass1 = prompt('请输入密码:', '');
@@ -14,6 +15,7 @@
         if (pass1 == "1022") {
         
         alert('密码正确!');
+        i++;
         
         break;
         
@@ -28,6 +30,7 @@
         if (pass1 != "password" & testV == 3) history.go(-1);
         
         return " ";
+        system.out.print("i");
       
         }
         
@@ -108,56 +111,4 @@ img{
 <p>www,谈恋爱以后才发现男孩子都是大狗狗，虽然但是我对象好可爱</p>
 <p>——纵使人山人海，我也希望，下一刻我首先拥抱到的只有你。</p>
 </body>
-</html>
-<html>
-<style type="text/css">
-	
-#bottom-outer {
-    color: #888;
-    text-align: center;
-    padding: 10px;
-    padding-top: 40px;
-    background-color: #fff;
-    font-size: 14px;
-    opacity:0.85;
-}
-
-</style>
-
-
-</head>
-<body>
-<div id="bottom-outer">
-                <div id="bottom-inner">
-                   
-                
-                    <br>本站访问量:<span id="result1"></span>
-
-                    -<span id="year"></span>
-
-
-                </div>
-            </div>
-        </div>
-
-</body>
-
-
-
-<script type="text/javascript">
-	//流量统计
-                    if (localStorage.pagecount) {
-                        localStorage.pagecount = Number(localStorage.pagecount) + 1;
-                    } else {
-                        localStorage.pagecount = 1;
-                    }
-                    document.getElementById("result1").innerHTML = localStorage.pagecount;
-
-
-            //年份获取
-
-            var myDate = new Date();
-            var year = myDate.getFullYear();
-            document.getElementById('year').innerHTML = year;
-</script>
 </html>
