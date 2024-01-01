@@ -1,4 +1,57 @@
 <!DOCTYPE html>
+<!DOCTYPE html>
+<html>
+<style type="text/css">
+	
+#bottom-outer {
+    color: #888;
+    text-align: center;
+    padding: 10px;
+    padding-top: 40px;
+    background-color: #fff;
+    font-size: 14px;
+    opacity:0.85;
+}
+
+</style>
+
+
+</head>
+<body>
+<div id="bottom-outer">
+                <div id="bottom-inner">
+                   
+                
+                    <br>本站访问量:<span id="result1"></span>
+
+                    -<span id="year"></span>
+
+
+                </div>
+            </div>
+        </div>
+
+</body>
+
+
+
+<script type="text/javascript">
+	//流量统计
+                    if (localStorage.pagecount) {
+                        localStorage.pagecount = Number(localStorage.pagecount) + 1;
+                    } else {
+                        localStorage.pagecount = 1;
+                    }
+                    document.getElementById("result1").innerHTML = localStorage.pagecount;
+
+
+            //年份获取
+
+            var myDate = new Date();
+            var year = myDate.getFullYear();
+            document.getElementById('year').innerHTML = year;
+</script>
+</html>
 <html>
      <script language = JavaScript>
     function password() {
